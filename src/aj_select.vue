@@ -12,7 +12,7 @@
 </template>
 <script setup>
 import {computed, onMounted, onUnmounted, ref, watch} from "vue";
-
+// 2.0.1
 const props = defineProps({
 	modelValue: {},
 	items: {type: Array, default: []},
@@ -36,16 +36,16 @@ const listAllow = computed(() => isMulti.value ? props.items : props.items.filte
 
 watch(() => props.modelValue, () => value.value = props.modelValue);
 let onClick = (e) => {
-	if(e.target === select.value) status.value = !status.value
+	if(e.target === select.value) status.value = !status.value;
 	else if(!select.value.contains(e.target)) status.value = false;
 }
 
 onMounted(() => {
-	window.addEventListener('click', onClick)
-})
+	window.addEventListener('click', onClick);
+});
 onUnmounted(() => {
-	window.removeEventListener('click', onClick)
-})
+	window.removeEventListener('click', onClick);
+});
 const isSelect = (item) => isMulti.value && value.value.map(JSON.stringify).includes(JSON.stringify(item));
 const Select = (el) => {
 	if(props.block !== false) return;
@@ -60,7 +60,7 @@ const Select = (el) => {
 	}
 	emit("update:modelValue", value);
 	emit("emit");
-}
+};
 </script>
 <style lang="scss">
 $col_text: #ffffff;
