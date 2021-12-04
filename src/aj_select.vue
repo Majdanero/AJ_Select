@@ -12,7 +12,7 @@
 </template>
 <script setup>
 import {computed, onMounted, onUnmounted, ref, watch} from "vue";
-// 2.0.1
+// example
 const props = defineProps({
 	modelValue: {},
 	items: {type: Array, default: []},
