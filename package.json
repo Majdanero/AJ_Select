@@ -1,8 +1,12 @@
 {
-  "name": "AJ_Select",
-  "version": "2.0.0",
+  "name": "aj_select",
+  "version": "2.0.1",
   "description": "",
-
+  "author": {
+    "email": "szymon.majdanik@gmail.com",
+    "name": "Majdan"
+  },
+  "repository": "https://github.com/Majdanero/AJ_Select",
   "main": "dist/aj_select.ssr.js",
   "browser": "dist/aj_select.esm.js",
   "module": "dist/aj_select.esm.js",
